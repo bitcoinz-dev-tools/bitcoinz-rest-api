@@ -1,0 +1,24 @@
+{
+  "network": "livenet",
+  "port": 3001,
+  "services": [
+    "bitcoind",
+    "insight-api-btcz",
+    "insight-ui-btcz",
+    "web"
+  ],
+  "servicesConfig": {
+    "bitcoind": {
+      "spawn": {
+        "datadir": "/bitcoinz/data",
+        "exec": "/usr/src/app/bitcore-node-btcz/bin/zcashd"
+      }
+    },
+    "insight-api-btcz": {
+      "routePrefix": "api"
+    },
+    "insight-ui-btcz": {
+      "apiPrefix": "api"
+    }
+  }
+}
