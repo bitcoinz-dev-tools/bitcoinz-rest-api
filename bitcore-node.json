@@ -15,7 +15,8 @@
       }
     },
     "insight-api-btcz": {
-      "routePrefix": "api"
+      "routePrefix": "api",
+      "disableRateLimiter": true
     },
     "insight-ui-btcz": {
       "apiPrefix": "api"
