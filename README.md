@@ -23,7 +23,7 @@ docker run -it --name insight \
 ```
 
 NOTE: The BitcoinZ data lives in `/bitcoinz/data`. It is suggested to mount a shared volume so that
-if the docker container is ever updated or delted, the node data is still available. You can
+if the docker container is ever updated or deleted, the node data is still available. You can
 mount a shared volume like so:
 
 
