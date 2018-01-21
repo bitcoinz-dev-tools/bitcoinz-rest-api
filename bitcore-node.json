@@ -15,11 +15,12 @@
       }
     },
     "insight-api-btcz": {
-      "routePrefix": "api",
-      "disableRateLimiter": true
+      "disableRateLimiter": true,
+      "routePrefix": "api"
     },
     "insight-ui-btcz": {
-      "apiPrefix": "api"
+      "apiPrefix": "api",
+      "routePrefix": ""
     }
   }
 }
