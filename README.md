@@ -13,10 +13,25 @@ docker build -t btcz/insight .
 ```
 
 ## Usage
-Run the container using the following command:
+To simplying get the container up and running using the following command:
 
 ```
-docker run -d --name insight \
+docker run -it --name insight \
+  -p 3001:3001 \
+  -p 1989:1989 \
+  btcz/insight
+```
+
+NOTE: The BitcoinZ data lives in `/bitcoinz/data`. It is suggested to mount a shared volume so that
+if the docker container is ever updated or delted, the node data is still available. You can
+mount a shared volume like so:
+
+
+```
+mkdir -p /opt/storage/bitcoinz/data/
+chmod a+x /opt/storage/bitcoinz/data/
+cp bitcoinz.conf /opt/storage/bitcoinz/data/zcash.conf
+docker run -it --name insight \
   -p 3001:3001 \
   -p 1989:1989 \
   -v /opt/storage/bitcoinz/data/:/bitcoinz/data \
