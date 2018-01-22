@@ -28,8 +28,8 @@ mount a shared volume like so:
 
 
 ```
-mkdir -p /opt/storage/bitcoinz/data/
-chmod a+x /opt/storage/bitcoinz/data/
+sudo mkdir -p /opt/storage/bitcoinz/data/
+sudo chmod a+rwx /opt/storage/bitcoinz/data/
 cp bitcoinz.conf /opt/storage/bitcoinz/data/zcash.conf
 docker run -it --name insight \
   -p 3001:3001 \
