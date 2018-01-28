@@ -11,3 +11,4 @@ services:
       - 1989:1989
     volumes:
       - ./data/:/bitcoinz/data
+      - ./bitcoinz.conf:/bitcoinz/data/zcash.conf
