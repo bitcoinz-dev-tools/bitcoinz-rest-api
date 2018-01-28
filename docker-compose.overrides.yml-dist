@@ -1,0 +1,14 @@
+version: "3"
+
+# The following can be used if you want to use port 80 for the api instead
+# of 3001. More information about this can be found at:
+# - https://github.com/jwilder/nginx-proxy
+# - https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion
+
+services:
+  insight:
+    environment:
+      - VIRTUAL_HOST=explorer.btcz.rocks
+      - VIRTUAL_PORT=3001
+      - LETSENCRYPT_HOST=explorer.btcz.rocks
+      - LETSENCRYPT_EMAIL=nobody@btcz.rocks
