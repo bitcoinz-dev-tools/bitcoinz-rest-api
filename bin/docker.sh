@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Script needs to run as sudo in case the `data` directory was created before
+# this script is executed.
+[ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
+
 # This script serves as a quick get-up-and-go script for those who aren't
 # familiar with docker. All it really does is provide some aliases for
 # docker-compose.
@@ -13,6 +17,8 @@ function _docker {
 }
 
 binDir="$(cd $(dirname "$0") && pwd)"
+
+chown -R 999:999 "${binDir}/../data"
 
 case ${1} in
     st|status)
