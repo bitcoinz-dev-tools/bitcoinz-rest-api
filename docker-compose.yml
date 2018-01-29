@@ -5,7 +5,7 @@ services:
     build:
       context: .
     network_mode: bridge
-    restart: unless-stopped
+    restart: always
     ports:
       - 3001:3001
       - 1989:1989

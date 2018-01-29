@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # This script serves as a quick get-up-and-go script for those who aren't
 # familiar with docker. All it really does is provide some aliases for
