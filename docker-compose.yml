@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  insight:
+    build:
+      context: .
+    network_mode: bridge
+    restart: always
+    ports:
+      - 3001:3001
+      - 1989:1989
+    volumes:
+      - ./data/:/bitcoinz/data
+      - ./bitcoinz.conf:/bitcoinz/data/zcash.conf

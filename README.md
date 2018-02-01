@@ -37,3 +37,8 @@ docker run -it --name insight \
   -v /opt/storage/bitcoinz/data/:/bitcoinz/data \
   btcz/insight
 ```
+
+## Docker Compose
+To simplify operation of the insight service, you can use [docker
+compose](https://docs.docker.com/compose/install/). After installation, you can
+use docker-compose by running the `./bin/docker.sh` script.
