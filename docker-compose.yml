@@ -12,3 +12,4 @@ services:
     volumes:
       - ./data/:/bitcoinz/data
       - ./bitcoinz.conf:/bitcoinz/data/zcash.conf
+      - ./pools.json:/usr/src/app/btcz-explorer/node_modules/insight-api-btcz/pools.json

@@ -1,0 +1,51 @@
+[
+  {
+    "poolName": "NaN",
+    "url": "",
+    "searchStrings": [
+      "/NaN"
+    ]
+  },
+  {
+    "poolName": "equipool",
+    "url": "https://equipool.1ds.us/",
+    "searchStrings": [
+      "EquiPool"
+    ]
+  },
+  {
+    "poolName": "CryptoBroker",
+    "url": "https://pool.cryptobroker.io",
+    "searchStrings": [
+      "CryptoBroker"
+    ]
+  },
+  {
+    "poolName": "GetPool",
+    "url": "https://getpool.network/",
+    "searchStrings": [
+      "getpool"
+    ]
+  },
+  {
+    "poolName": "Mining4",
+    "url": "http://equi.mining4.co.uk",
+    "searchStrings": [
+      "Mining4"
+    ]
+  },
+  {
+    "poolName": "miningspeed",
+    "url": "http://pool.miningspeed.com/",
+    "searchStrings": [
+      "miningspeed.com"
+    ]
+  },
+  {
+    "poolName": "RagnarPool",
+    "url": "http://pool.bitcoinzguiding.ovh",
+    "searchStrings": [
+      "bitcoinzguiding"
+    ]
+  }
+]
