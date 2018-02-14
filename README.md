@@ -15,17 +15,17 @@ The following applications are required to run Insight:
 Build the container with the following command:
 
 ```
-docker build -t btcz/insight .
+docker build -t btcz/bitcoinz-rest-api .
 ```
 
 ## Usage
 To simplying get the container up and running using the following command:
 
 ```
-docker run -it --name insight \
+docker run -it --name bitcoinz-rest-api \
   -p 3001:3001 \
   -p 1989:1989 \
-  btcz/insight
+  btcz/bitcoinz-rest-api
 ```
 
 NOTE: The BitcoinZ data lives in `/bitcoinz/data`. It is suggested to mount a shared volume so that
@@ -37,11 +37,11 @@ mount a shared volume like so:
 sudo mkdir -p /opt/storage/bitcoinz/data/
 sudo chmod a+rwx /opt/storage/bitcoinz/data/
 cp bitcoinz.conf /opt/storage/bitcoinz/data/zcash.conf
-docker run -it --name insight \
+docker run -it --name bitcoinz-rest-api \
   -p 3001:3001 \
   -p 1989:1989 \
   -v /opt/storage/bitcoinz/data/:/bitcoinz/data \
-  btcz/insight
+  btcz/bitcoinz-rest-api
 ```
 
 ## Docker Compose
