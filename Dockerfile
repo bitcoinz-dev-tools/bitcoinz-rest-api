@@ -22,7 +22,7 @@ RUN apt-get update \
   	pwgen \
   && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/renuzit/bitcoinz-insight-patched.git /usr/local/src/
+RUN git clone https://github.com/bitcoinz-dev-tools/bitcoinz-insight-patched.git /usr/local/src/
 
 WORKDIR /usr/local/src/
 RUN ./zcutil/build.sh -j$(nproc)
@@ -68,11 +68,11 @@ RUN curl -sL https://deb.nodesource.com/setup_4.x > setup_4.x \
   && apt install -y nodejs \
   && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/renuzit/bitcore-node-btcz.git
+RUN git clone https://github.com/bitcoinz-dev-tools/bitcore-node-btcz.git
 RUN cd bitcore-node-btcz; npm install
 RUN ./bitcore-node-btcz/bin/bitcore-node create -d /bitcoinz/data btcz-explorer
 WORKDIR /usr/src/app/btcz-explorer
-RUN ../bitcore-node-btcz/bin/bitcore-node install renuzit/insight-api-btcz renuzit/insight-ui-btcz
+RUN ../bitcore-node-btcz/bin/bitcore-node install bitcoinz-dev-tools/insight-api-btcz bitcoinz-dev-tools/insight-ui-btcz
 
 # Copy binaries from build container
 COPY --from=build /usr/local/src/src/zcashd /usr/src/app/bitcore-node-btcz/bin
