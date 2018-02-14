@@ -2,7 +2,7 @@
 
 # Script needs to run as sudo in case the `data` directory was created before
 # this script is executed.
-[ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
+#[ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
 
 # This script serves as a quick get-up-and-go script for those who aren't
 # familiar with docker. All it really does is provide some aliases for
@@ -18,7 +18,7 @@ function _docker {
 
 binDir="$(cd $(dirname "$0") && pwd)"
 
-chown -R 999:999 "${binDir}/../data"
+# chown -R 999:999 "${binDir}/../data"
 
 case ${1} in
     st|status)
@@ -29,9 +29,8 @@ case ${1} in
         ;;
 
     start)
-        _compose up -d --force-recreate && \
-            _compose logs -f --tail=1
-        ;;
+        _compose up --force-recreate \
+  	;;
 
     stop)
         _compose stop --time 30
