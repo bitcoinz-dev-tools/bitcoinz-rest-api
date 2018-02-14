@@ -1,5 +1,11 @@
-# Insight Docker
-A docker build for insight
+# BitcoinZ REST APIs 
+Docker build scripts for the BitcoinZ Restful API.
+
+## About
+The BitcoinZ REST APIs are a set of APIs based on the insight explorer.
+For more information about the APIs routes available, you can checkout
+the documentation on the API project here: 
+https://github.com/bitcoinz-dev-tools/insight-api-btcz 
 
 ## Requirements
 The following applications are required to run Insight:
