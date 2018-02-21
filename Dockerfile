@@ -3,6 +3,7 @@ FROM debian:stretch-slim as build
 # Install our build dependencies
 RUN apt-get update \
   && apt-get install -y \
+    curl \
     build-essential \
   	pkg-config \
   	libc6-dev \
