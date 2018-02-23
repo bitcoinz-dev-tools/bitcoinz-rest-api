@@ -1,15 +1,25 @@
 version: "3"
 
 services:
+  bitcoinz-insight-patched:
+    container_name: bitcoinz-insight-patched
+    image: btcz/bitcoinz-insight-patched
+    network_mode: bridge
+    restart: always
+    ports:
+      - 1989:1989
+    volumes:
+      - ./data/:/bitcoinz/data
+      - ./bitcoinz.conf:/bitcoinz/data/bitcoinz.conf
   insight:
     build:
       context: .
+    links:
+      - bitcoinz-insight-patched
     network_mode: bridge
     restart: always
     ports:
       - 3001:3001
-      - 1989:1989
     volumes:
-      - ./data/:/bitcoinz/data
-      - ./bitcoinz.conf:/bitcoinz/data/zcash.conf
       - ./pools.json:/usr/src/app/btcz-explorer/node_modules/insight-api-btcz/pools.json
+      - ./bitcore-node.json:/usr/src/app/btcz-explorer/bitcore-node.json
