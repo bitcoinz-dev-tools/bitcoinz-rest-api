@@ -2,7 +2,6 @@ version: "3"
 
 services:
   bitcoinz-insight-patched:
-    container_name: bitcoinz-insight-patched
     image: btcz/bitcoinz-insight-patched
     network_mode: bridge
     restart: always
