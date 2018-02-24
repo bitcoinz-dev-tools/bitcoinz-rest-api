@@ -20,7 +20,7 @@ docker build -t btcz/bitcoinz-rest-api .
 ```
 
 ## Usage
-To simplying get the container up and running using the following command:
+To get the container up and running quickly, use the following command:
 
 ```
 docker run -it --name bitcoinz-insight-patched \
@@ -28,6 +28,7 @@ docker run -it --name bitcoinz-insight-patched \
   btcz/bitcoinz-insight-patched
 
 docker run -it --name bitcoinz-rest-api \
+  --link bitcoinz-insight-patched
   -p 3001:3001 \
   btcz/bitcoinz-rest-api
 ```
