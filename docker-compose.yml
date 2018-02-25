@@ -20,5 +20,4 @@ services:
     ports:
       - 3001:3001
     volumes:
-      - ./pools.json:/usr/src/app/btcz-explorer/node_modules/insight-api-btcz/pools.json
       - ./bitcore-node.json:/usr/src/app/btcz-explorer/bitcore-node.json
