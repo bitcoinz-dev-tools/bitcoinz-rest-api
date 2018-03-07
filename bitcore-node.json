@@ -9,10 +9,15 @@
   ],
   "servicesConfig": {
     "bitcoind": {
-      "spawn": {
-        "datadir": "/bitcoinz/data",
-        "exec": "/usr/src/app/bitcore-node-btcz/bin/zcashd"
-      }
+      "connect": [
+        {
+          "rpchost": "bitcoinz-insight-patched",
+          "rpcport": 1979,
+          "rpcuser": "bitcoin",
+          "rpcpassword": "local321",
+          "zmqpubrawtx": "tcp://bitcoinz-insight-patched:28332"
+        }
+      ]
     },
     "insight-api-btcz": {
       "disableRateLimiter": true,
