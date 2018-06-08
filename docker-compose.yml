@@ -2,8 +2,9 @@ version: "3"
 
 services:
   bitcoinz-insight-patched:
-    image: btcz/bitcoinz-insight-patched
-    network_mode: bridge
+    image: btcz/bitcoinz-insight-patched:1.2.1
+    networks:
+      - back
     restart: always
     ports:
       - 1989:1989
@@ -13,11 +14,13 @@ services:
   insight:
     build:
       context: .
-    links:
-      - bitcoinz-insight-patched
-    network_mode: bridge
+    networks:
+      - back
     restart: always
     ports:
       - 3001:3001
     volumes:
       - ./bitcore-node.json:/usr/src/app/btcz-explorer/bitcore-node.json
+
+networks:
+  back:
