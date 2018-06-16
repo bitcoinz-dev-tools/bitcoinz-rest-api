@@ -2,7 +2,7 @@ version: "3"
 
 services:
   bitcoinz-insight-patched:
-    image: btcz/bitcoinz-insight-patched:1.2.1
+    image: btcz/bitcoinz-insight-patched:1.4.0
     networks:
       - back
     restart: always
