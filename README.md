@@ -10,7 +10,7 @@ https://github.com/bitcoinz-dev-tools/insight-api-btcz
 ## Requirements
 The following applications are required to run Insight:
 * Docker 17.05 or higher
-* bitcoinz-insight-patched docker container
+* bitcoinz docker container
 
 ## Build
 Build the container with the following command:
@@ -23,12 +23,12 @@ docker build -t btcz/bitcoinz-rest-api .
 To get the container up and running quickly, use the following command:
 
 ```
-docker run -it --name bitcoinz-insight-patched \
+docker run -it --name bitcoinz \
   -p 1989:1989 \
-  btcz/bitcoinz-insight-patched
+  btcz/bitcoinz
 
 docker run -it --name bitcoinz-rest-api \
-  --link bitcoinz-insight-patched
+  --link bitcoinz
   -p 3001:3001 \
   btcz/bitcoinz-rest-api
 ```

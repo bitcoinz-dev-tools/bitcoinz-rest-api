@@ -11,11 +11,11 @@
     "bitcoind": {
       "connect": [
         {
-          "rpchost": "bitcoinz-insight-patched.",
+          "rpchost": "bitcoinz.",
           "rpcport": 1979,
           "rpcuser": "bitcoin",
           "rpcpassword": "local321",
-          "zmqpubrawtx": "tcp://bitcoinz-insight-patched:28332"
+          "zmqpubrawtx": "tcp://bitcoinz:28332"
         }
       ]
     },
