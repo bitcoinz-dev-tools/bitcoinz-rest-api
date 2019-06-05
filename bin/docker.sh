@@ -68,6 +68,6 @@ case ${1} in
         echo "./bin/docker.sh build -- Build or rebuild the service"
         echo "./bin/docker.sh logs -- Watch the log file"
         echo "./bin/docker.sh bash -- Enter into a bash prompt inside the container"
-        echo "./bin/docker.sh bash -- Kill the service and delete the container's image"
+        echo "./bin/docker.sh rm -- Kill the service and delete the container's image"
         ;;
 esac
